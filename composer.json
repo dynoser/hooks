@@ -1,0 +1,19 @@
+{
+    "name": "dynoser/hooks",
+    "description": "Allows you to use hook integration in PHP scripts",
+    "autoload": {
+        "psr-4": {
+            "dynoser\\Hooks\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "dyno-aliases": {
+            "Solomono\\Hook": "dynoser\\hooks\\Hook",
+            "Solomono\\Hooks\\HookBase": "dynoser\\hooks\\HookBase",
+            "Solomono\\Hooks\\HookInt": "dynoser\\hooks\\HookInt",
+            "Solomono\\Hooks\\HookLog": "dynoser\\hooks\\HookLog",
+            "Solomono\\Hooks\\HookNext": "dynoser\\hooks\\HookNext"
+        }
+    }
+}
