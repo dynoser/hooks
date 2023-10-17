@@ -3,8 +3,8 @@ namespace dynoser\Hooks;
 
 class Hook extends HookBase
 {    
-    use HookLog;
-    use HookNext;
-    use HookInt;
+    use \dynoser\Hooks\HookLog;
+    use \dynoser\Hooks\HookInt;
+    use \dynoser\Hooks\HookNext;
     //use \Solomono\Hooks\HookDepend;
 }
