@@ -30,13 +30,15 @@ trait HookInt {
 
     public static function getRootDir(): string {
         if (!self::$rootDir) {
-            if (!empty($GLOBALS['rootDir'])) {
+            if (\class_exists('dynoser\\autoload\\AutoLoadSetup', false)) {
+                $rootDir = \dynoser\autoload\AutoLoadSetup::$rootDir;
+            } elseif (!empty($GLOBALS['rootDir'])) {
                 $rootDir = $GLOBALS['rootDir'];
             } elseif (\defined("ROOT_DIR")) {
                 $rootDir = ROOT_DIR;
             } elseif (\defined("DIR_ROOT")) {
                 $rootDir = DIR_ROOT;
-            } else {
+            }else {
                 throw new \Exception("Can't detect RootDir");
             }
             $rootDir = realpath($rootDir);
